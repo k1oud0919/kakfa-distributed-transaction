@@ -1,0 +1,29 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: egova
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    root: info
