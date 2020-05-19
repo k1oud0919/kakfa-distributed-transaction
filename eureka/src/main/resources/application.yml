@@ -10,3 +10,6 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     register-with-eureka: false
     fetchRegistry: false
+
+#k1oud:
+#  test: hahaha

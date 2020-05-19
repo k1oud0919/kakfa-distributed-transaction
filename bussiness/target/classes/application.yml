@@ -10,6 +10,10 @@ spring:
     password: egova
   main:
     allow-bean-definition-overriding: true
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: test_distributed_transaction_group
 
 eureka:
   instance:
